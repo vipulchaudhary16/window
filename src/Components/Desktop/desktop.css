@@ -1,23 +1,25 @@
-.container{
+.container {
     display: flex;
+    justify-content: start;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-.nav_icon{
+.navs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: fit-content;
+}
+
+.nav_icon {
     height: 3rem;
     cursor: pointer;
     display: block;
 }
 
-.navs{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.nav_item{
+.nav_item {
     margin: 10px 10px;
     display: flex;
     flex-direction: column;
@@ -25,6 +27,12 @@
     justify-content: center;
 }
 
-.explorer{
-    box-sizing: border-box;
+.explorer {
+    position: absolute;
+    width: 70%;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }

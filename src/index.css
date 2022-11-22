@@ -20,4 +20,9 @@ body{
 .icon{
   height: 2rem;
   margin: 0.5rem 0.5rem 0 0 ;
+  cursor: pointer;
+}
+
+section{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
