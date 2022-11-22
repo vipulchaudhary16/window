@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useContext, useState } from "react";
 import "./desktop.css";
 
 import aboutMe from "../../Assets/aboutMe.png";
@@ -6,16 +6,24 @@ import folder from "../../Assets/folder.png";
 import AboutMe from "../AboutMe/AboutMe";
 
 import { motion, AnimatePresence } from "framer-motion";
+//State context
+import windowContext from "../../Context/WindowContext";
 
 export default function Desktop() {
-  const [currWindow, setcurrWindow] = useState("");
+  const context = useContext(windowContext);
+  const { currWindow, setcurrWindow } = context;
+
   return (
     <div className="container">
       <div className="navs">
         <div className="nav_item">
           <img
             src={aboutMe}
-            onClick={() => setcurrWindow("about-me")}
+            onClick={() =>{
+              currWindow === "about-me" ?
+              setcurrWindow("") :
+              setcurrWindow("about-me")
+            }}
             alt=""
             className="nav_icon"
           />
@@ -43,7 +51,9 @@ export default function Desktop() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {currWindow == "about-me" ? <AboutMe currWindow = {currWindow} /> : null}
+            {currWindow == "about-me" ? (
+              <AboutMe currWindow={currWindow} />
+            ) : null}
           </motion.div>
         </AnimatePresence>
       </div>

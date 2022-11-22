@@ -1,13 +1,16 @@
-import './App.css';
-import Desktop from './Components/Desktop/Desktop';
-import Navbar from './Components/Navbar/Navbar';
+import "./App.css";
+import Desktop from "./Components/Desktop/Desktop";
+import Navbar from "./Components/Navbar/Navbar";
+import WindowState from "./Context/windowState";
 
 function App() {
   return (
-    <div className="App">
-      <Desktop/>
-      <Navbar/>
-    </div>
+    <WindowState>
+      <div className="App">
+        <Desktop />
+        <Navbar />
+      </div>
+    </WindowState>
   );
 }
 

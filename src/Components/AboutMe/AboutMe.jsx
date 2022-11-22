@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./aboutme.css";
 import { FiSave } from "react-icons/fi";
 import { ImUndo } from "react-icons/im";
@@ -9,8 +9,13 @@ import { BiSquareRounded } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
 import myself from '../../Assets/myself.png'
+import windowContext from "../../Context/WindowContext";
+
+//state context
 
 export default function AboutMe() {
+  const {setcurrWindow} = useContext(windowContext)
+
   return (
     <section>
       <div className="main">
@@ -30,7 +35,7 @@ export default function AboutMe() {
             </div>
             <AiOutlineMinus className="icon_nav" />
             <BiSquareRounded className="icon_nav" />
-            <AiOutlineClose className="icon_nav danger"/>
+            <AiOutlineClose className="icon_nav danger" onClick={()=> setcurrWindow("")} />
           </div>
         </header>
         <div className="menu">

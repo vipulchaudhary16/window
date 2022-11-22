@@ -1,58 +1,62 @@
-.main{
+.main {
     width: 100%;
     box-sizing: border-box;
     background: #2B579A;
     padding: 10px;
     border-radius: 10px 10px 0 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
 }
 
-.icon_nav{
+.icon_nav {
     cursor: pointer;
     padding: 5px;
 }
 
-.icon_nav:hover{
+.icon_nav:hover {
     background: #124078;
 }
 
-.danger:hover{
+.danger:hover {
     background: red;
 }
 
-.end .account{
+.end .account {
     padding-right: 8px;
 }
 
-.menu{
+.menu {
     margin-top: 8px;
 }
-.menu span{
+
+.menu span {
     padding: 3px;
     cursor: pointer;
 }
 
-.about_container{
+.about_container {
     background: #E6E6E6;
     padding: 2rem;
     border-radius: 0 0 10px 10px;
 }
 
-.content{
+.content {
     background: #ffffff;
     padding: 1rem;
 }
 
-.content img{
+.content img {
     display: block;
     margin: 0 auto;
 }
 
-.content p{
+.content p {
     text-align: justify;
     color: black;
 }
