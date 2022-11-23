@@ -8,9 +8,11 @@
 .navs {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     justify-content: center;
     width: fit-content;
+    max-width: 7rem;
 }
 
 .nav_icon {
@@ -27,6 +29,10 @@
     justify-content: center;
 }
 
+.nav_item span{
+    font-size: 13px;
+}
+
 .explorer {
     position: absolute;
     width: 70%;
@@ -40,4 +46,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    min-height: 50%;
 }

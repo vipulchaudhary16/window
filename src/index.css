@@ -5,6 +5,7 @@ body{
   background: url('./Assets/wallpaper.jpg');
   background-size: cover;
   color: white;
+  overflow: hidden;
 }
 
 .flex_vr{
@@ -19,4 +20,18 @@ body{
 
 section{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Action Icon CSS */
+.icon_nav {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon_nav:hover {
+  background: #124078;
+}
+
+.danger:hover {
+  background: red;
 }

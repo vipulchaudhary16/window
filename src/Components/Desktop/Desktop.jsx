@@ -8,6 +8,8 @@ import AboutMe from "../AboutMe/AboutMe";
 import { motion, AnimatePresence } from "framer-motion";
 //State context
 import windowContext from "../../Context/WindowContext";
+import Skills from "../Skills/Skills";
+import { Icons } from "../../Assets";
 
 export default function Desktop() {
   const context = useContext(windowContext);
@@ -18,19 +20,28 @@ export default function Desktop() {
       <div className="navs">
         <div className="nav_item">
           <img
-            src={aboutMe}
-            onClick={() =>{
-              currWindow === "about-me" ?
-              setcurrWindow("") :
-              setcurrWindow("about-me")
+            src={Icons.word}
+            onClick={() => {
+              currWindow === "about-me"
+                ? setcurrWindow("")
+                : setcurrWindow("about-me");
             }}
             alt=""
             className="nav_icon"
           />
-          <span>About</span>
+          <span>About me</span>
         </div>
         <div className="nav_item">
-          <img src={folder} alt="" className="nav_icon" />
+          <img
+            onClick={() => {
+              currWindow === "skills"
+                ? setcurrWindow("")
+                : setcurrWindow("skills");
+            }}
+            src={folder}
+            alt=""
+            className="nav_icon"
+          />
           <span>Skills</span>
         </div>
         <div className="nav_item">
@@ -51,9 +62,8 @@ export default function Desktop() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {currWindow == "about-me" ? (
-              <AboutMe currWindow={currWindow} />
-            ) : null}
+            {currWindow == "about-me" ? <AboutMe currWindow={currWindow} />: null}
+            {currWindow == "skills" ? <Skills currWindow={currWindow} /> : null}
           </motion.div>
         </AnimatePresence>
       </div>

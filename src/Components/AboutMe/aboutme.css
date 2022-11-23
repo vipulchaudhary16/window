@@ -1,4 +1,4 @@
-.main {
+.aboutme__main {
     width: 100%;
     box-sizing: border-box;
     background: #2B579A;
@@ -14,28 +14,15 @@ header {
     justify-content: space-between;
 }
 
-.icon_nav {
-    cursor: pointer;
-    padding: 5px;
-}
-
-.icon_nav:hover {
-    background: #124078;
-}
-
-.danger:hover {
-    background: red;
-}
-
 .end .account {
     padding-right: 8px;
 }
 
-.menu {
+.aboutme__menu {
     margin-top: 8px;
 }
 
-.menu span {
+.aboutme__menu span {
     padding: 3px;
     cursor: pointer;
 }
@@ -46,17 +33,17 @@ header {
     border-radius: 0 0 10px 10px;
 }
 
-.content {
+.about__content {
     background: #ffffff;
     padding: 1rem;
 }
 
-.content img {
+.about__content img {
     display: block;
     margin: 0 auto;
 }
 
-.content p {
+.about__content p {
     text-align: justify;
     color: black;
 }

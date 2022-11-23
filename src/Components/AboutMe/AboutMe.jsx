@@ -4,21 +4,16 @@ import { FiSave } from "react-icons/fi";
 import { ImUndo } from "react-icons/im";
 import { GoSync } from "react-icons/go";
 import { FaUserAlt } from "react-icons/fa";
-import { AiOutlineMinus } from "react-icons/ai";
-import { BiSquareRounded } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
+import Actions from '../Actions'
 
 import myself from '../../Assets/myself.png'
-import windowContext from "../../Context/WindowContext";
 
-//state context
 
 export default function AboutMe() {
-  const {setcurrWindow} = useContext(windowContext)
 
   return (
     <section>
-      <div className="main">
+      <div className="aboutme__main">
         <header>
           <div className="start">
             <FiSave />
@@ -33,12 +28,10 @@ export default function AboutMe() {
               <FaUserAlt />
               Vipul Chaudhary
             </div>
-            <AiOutlineMinus className="icon_nav" />
-            <BiSquareRounded className="icon_nav" />
-            <AiOutlineClose className="icon_nav danger" onClick={()=> setcurrWindow("")} />
+            <Actions/>
           </div>
         </header>
-        <div className="menu">
+        <div className="aboutme__menu">
           <span> File </span>
           <span> Home </span>
           <span> Insert </span>
@@ -54,7 +47,7 @@ export default function AboutMe() {
         </div>
       </div>
       <article className="about_container">
-        <div className="content">
+        <div className="about__content">
           <img src={myself} alt="MYSELF"/>
           <p className="about">
             Myself Vipul Chaudhary, computer engineering student from PDEU, Gandhinagar. I'm 2 ⭐ coder with max rating 1636 on CodeChef, Newbie on Codeforces with max rating of 1002 and have solved over 270 questions on LeetCode. I enjoy making products that have the potential to influence the way the world thinks. I am familiar with
