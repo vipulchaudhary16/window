@@ -5,6 +5,7 @@
 .skills__header{
     display: flex;
     justify-content: space-between;
+    padding: 5px;
     background: #120800;
 }
 
@@ -12,7 +13,6 @@
     width: 10rem;
     background: #241e1a;
     margin-top: 8px;
-    margin-left: 8px;
     padding: 8px;
     align-items: baseline;
     border-radius: 5px 5px 0 0;
@@ -34,7 +34,6 @@
     margin-bottom: 1rem;
 }
 
-
 .skill{
     display: flex;
     flex-direction: column;
@@ -53,6 +52,26 @@
     background-color: #120800;
     border-radius:30%;
     margin-bottom: 0.5rem;
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    
+    .skills__container{
+        flex-wrap: wrap;
+
+    }
+
+    .skills__content{
+        padding: 0.5rem;
+    }
+
+    .skill img{
+        height: 3rem;
+        width: 3rem;
+        padding: 0.5rem;
+    }
+
 }
 
 

@@ -1,7 +1,6 @@
-import { React, useContext, useState } from "react";
+import { React, useContext } from "react";
 import "./desktop.css";
 
-import aboutMe from "../../Assets/aboutMe.png";
 import folder from "../../Assets/folder.png";
 import AboutMe from "../AboutMe/AboutMe";
 
@@ -13,7 +12,7 @@ import { Icons } from "../../Assets";
 
 export default function Desktop() {
   const context = useContext(windowContext);
-  const { currWindow, setcurrWindow } = context;
+  const { currWindow, setcurrWindow, show, setShow } = context;
 
   return (
     <div className="container">
@@ -25,6 +24,7 @@ export default function Desktop() {
               currWindow === "about-me"
                 ? setcurrWindow("")
                 : setcurrWindow("about-me");
+              setShow("show");
             }}
             alt=""
             className="nav_icon"
@@ -37,6 +37,7 @@ export default function Desktop() {
               currWindow === "skills"
                 ? setcurrWindow("")
                 : setcurrWindow("skills");
+                setShow("show");
             }}
             src={folder}
             alt=""
@@ -54,7 +55,7 @@ export default function Desktop() {
         </div>
       </div>
 
-      <div className="explorer">
+      <div className={`explorer ${show}`}>
         <AnimatePresence>
           <motion.div
             key={currWindow}
@@ -62,8 +63,8 @@ export default function Desktop() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {currWindow == "about-me" ? <AboutMe currWindow={currWindow} />: null}
-            {currWindow == "skills" ? <Skills currWindow={currWindow} /> : null}
+            {currWindow === "about-me" ? <AboutMe currWindow={currWindow} />: null}
+            {currWindow === "skills" ? <Skills currWindow={currWindow} /> : null}
           </motion.div>
         </AnimatePresence>
       </div>

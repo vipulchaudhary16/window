@@ -5,7 +5,6 @@ body{
   background: url('./Assets/wallpaper.jpg');
   background-size: cover;
   color: white;
-  overflow: hidden;
 }
 
 .flex_vr{
@@ -34,4 +33,21 @@ section{
 
 .danger:hover {
   background: red;
+}
+
+/* Logical CSS */
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 450px) {
+  body{
+    height: 100vh;
+    background-position: center;
+  }
 }

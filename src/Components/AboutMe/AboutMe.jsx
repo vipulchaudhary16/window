@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./aboutme.css";
 import { FiSave } from "react-icons/fi";
 import { ImUndo } from "react-icons/im";
@@ -20,7 +20,7 @@ export default function AboutMe() {
             <ImUndo />
             <GoSync />
           </div>
-          <div className="middle ">
+          <div className="middle">
             <span>About me - Word</span>
           </div>
           <div className="end flex_hr">

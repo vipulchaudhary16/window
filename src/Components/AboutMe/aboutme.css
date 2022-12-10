@@ -15,7 +15,7 @@ header {
 }
 
 .end .account {
-    padding-right: 8px;
+    /* padding-right: 8px; */
 }
 
 .aboutme__menu {
@@ -46,4 +46,14 @@ header {
 .about__content p {
     text-align: justify;
     color: black;
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .aboutme__menu{
+        display: none;
+    }
+    .account{
+        display: none;
+    }
 }

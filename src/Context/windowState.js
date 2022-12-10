@@ -3,8 +3,9 @@ import { useState } from 'react';
 
 const WindowState = (props) => {
     const [currWindow, setcurrWindow] = useState("");
+    const [show, setShow] = useState("hide");
     return (
-        <WindowContext.Provider value={{currWindow, setcurrWindow }}>
+        <WindowContext.Provider value={{currWindow, setcurrWindow, show, setShow }}>
           {props.children}
         </WindowContext.Provider>
       );

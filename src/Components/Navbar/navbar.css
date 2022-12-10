@@ -1,5 +1,5 @@
 nav {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #202020;
     display: flex;
@@ -29,8 +29,14 @@ nav {
     cursor: pointer;
 }
 
-
 .end {
     gap: 0.3rem;
     align-items: flex-end;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 450px) {
+    .task_icon {
+        margin: 0.55rem 0.55rem 0 0;
+    }
 }
