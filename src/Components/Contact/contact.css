@@ -1,0 +1,61 @@
+.contact {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact__header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a2030;
+    padding: 0 0.7rem 0 0.7rem;
+}
+
+
+
+.contact__header .start img{
+    height: 1rem;
+}
+
+.contact__header .start span{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.contact__content{
+    padding: 1rem 0 0 1rem;
+    background: #272727;
+    min-height: 500px;
+}
+
+.contact__content input{
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #ffffff;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    background: transparent;
+}
+
+.form__item{
+    margin-bottom: 1rem;
+}
+
+.form__item label, input{
+    font-size: 1rem;
+}
+
+.form__item span{
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media screen and (max-width: 600px) {
+    .contact {
+        width: 80%;
+        height: 100vh;
+        margin-top: 1rem;
+    }
+}

@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import windowContext from "../../Context/WindowContext";
 import Skills from "../Skills/Skills";
 import { Icons } from "../../Assets";
+import Contact from "../Contact/Contact";
 
 export default function Desktop() {
   const context = useContext(windowContext);
@@ -37,7 +38,7 @@ export default function Desktop() {
               currWindow === "skills"
                 ? setcurrWindow("")
                 : setcurrWindow("skills");
-                setShow("show");
+              setShow("show");
             }}
             src={folder}
             alt=""
@@ -50,7 +51,17 @@ export default function Desktop() {
           <span>Work</span>
         </div>
         <div className="nav_item">
-          <img src={folder} alt="" className="nav_icon" />
+          <img
+            onClick={() => {
+              currWindow === "contact"
+                ? setcurrWindow("")
+                : setcurrWindow("contact");
+              setShow("show");
+            }}
+            src={folder}
+            alt=""
+            className="nav_icon"
+          />
           <span>Contact</span>
         </div>
       </div>
@@ -63,8 +74,15 @@ export default function Desktop() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {currWindow === "about-me" ? <AboutMe currWindow={currWindow} />: null}
-            {currWindow === "skills" ? <Skills currWindow={currWindow} /> : null}
+            {currWindow === "about-me" ? (
+              <AboutMe currWindow={currWindow} />
+            ) : null}
+            {currWindow === "skills" ? (
+              <Skills currWindow={currWindow} />
+            ) : null}
+            {currWindow === "contact" ? (
+              <Contact currWindow={currWindow} />
+            ) : null}
           </motion.div>
         </AnimatePresence>
       </div>
