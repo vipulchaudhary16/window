@@ -2,6 +2,7 @@ import { React, useContext } from "react";
 import "./desktop.css";
 
 import folder from "../../Assets/folder.png";
+import vscode from "../../Assets/vscode.png"
 import AboutMe from "../AboutMe/AboutMe";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +11,7 @@ import windowContext from "../../Context/WindowContext";
 import Skills from "../Skills/Skills";
 import { Icons } from "../../Assets";
 import Contact from "../Contact/Contact";
+import VSCode from "../Applications/VSCode";
 
 export default function Desktop() {
   const context = useContext(windowContext);
@@ -64,6 +66,20 @@ export default function Desktop() {
           />
           <span>Contact</span>
         </div>
+        <div className="nav_item">
+          <img
+            onClick={() => {
+              currWindow === "vscode"
+                ? setcurrWindow("")
+                : setcurrWindow("vscode");
+              setShow("show");
+            }}
+            src={vscode}
+            alt=""
+            className="nav_icon"
+          />
+          <span>VS Code</span>
+        </div>
       </div>
 
       <div className={`explorer ${show}`}>
@@ -83,6 +99,7 @@ export default function Desktop() {
             {currWindow === "contact" ? (
               <Contact currWindow={currWindow} />
             ) : null}
+            {currWindow === "vscode" ? (<VSCode/>) : null}
           </motion.div>
         </AnimatePresence>
       </div>
