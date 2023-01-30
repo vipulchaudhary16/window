@@ -50,8 +50,7 @@ export default function AboutMe() {
         <div className="about__content">
           <img src={myself} alt="MYSELF"/>
           <p className="about">
-            Myself Vipul Chaudhary, computer engineering student from PDEU, Gandhinagar. I'm 2 ⭐ coder with max rating 1636 on CodeChef, Newbie on Codeforces with max rating of 1002 and have solved over 270 questions on LeetCode. I enjoy making products that have the potential to influence the way the world thinks. I am familiar with
-            Web development with HTML, CSS, ReactJS and backend development with NodeJS, PHP and Android development using Java and Kotlin. I enjoy problem solving
+          I am a web developer with a passion for solving problems, learning new things, and building awesome applications. I love to learn about new technologies and apply them to my work. I work with a variety of technologies, including React, Node, Express, MongoDB, MySQL, Firebase Java, Kotlin.
           </p>
         </div>
       </article>

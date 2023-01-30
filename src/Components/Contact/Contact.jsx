@@ -2,6 +2,8 @@ import React from "react";
 import Actions from "../Actions";
 import notepad from "../../Assets/notepad.png";
 import "./contact.css";
+import Alert from "../Alert";
+import { RiAlertFill } from "react-icons/ri";
 
 export default function Contact() {
   const [messageContent, setMessageContent] = React.useState({
@@ -9,9 +11,12 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [alert, setAlert] = React.useState(false);
 
   return (
-    <div className="contact">
+    <>
+      {alert && <Alert />}
+      <div className="contact">
         <div className="contact__header">
           <div className="start">
             <img src={notepad} alt="" />
@@ -61,10 +66,23 @@ export default function Contact() {
               />
             </div>
             <div className="form__item">
-              <span>send</span>
+              <span
+                onClick={() => {
+                  if (
+                    messageContent.name === "*Untitled" ||
+                    messageContent.email === "" ||
+                    messageContent.message === ""
+                  )
+                    setAlert(true);
+                  else setAlert(false);
+                }}
+              >
+                send
+              </span>
             </div>
           </form>
         </div>
-    </div>
+      </div>
+    </>
   );
 }
